@@ -37,37 +37,94 @@
 
         }
 
-        nav li {
+        nav li  {
             list-style: none;
             margin: 20px;
+            
+        }
+        nav ul li>a{
+            text-decoration: none;
+            color: white;
+        }
+        nav ul li>a:hover{
+            color: rgb(160, 227, 53);
+            font-size: 1.05rem;
         }
 
         .left {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
         }
 
         .firstSection {
             display: flex;
-            justify-content: space-around;
-            margin: 10px 0;
+            /* justify-content: center; */
+            align-items: center;
+            margin-left:150px;
+           
+
         }
 
-        .firstSection div {
-            width: 30%;
+         .firstSection  >div {
+            width: 50%;
         }
 
         .leftSection {
-            background-color;
-            margin: 20px;
+            /* background-color:a; */
+            /* margin: 50px; */
+            font-size: 2rem;
+            
 
         }
 
         .rightSection img {
-            width: 80%;
-            margin: 30px 0;
-            height: 80%;
+            width: 70%;
+             /* margin: 30px 50px; */
+            height: 70%;
+
+        } 
+
+        .rightSection div {
+            margin: 10px 0 10px 80px;
+
+        } 
+        .myName{
+            color: rgb(13, 172, 127);
+        }
+        main hr{
+            background-color: rgba(32, 159, 198, 0.605);
+            height: 0.5px;
+            margin: 35px 100px;
+            border: 0px;
+            
+        }
+        .SecondSection{
+            width: 80vw;
+            margin:  auto;
+        }
+        .SecondSection h1{
+           font-size: 1.6rem;
+        }
+        .greyText{
+            color: grey;
+            font-size: 0.8rem;
+            margin-left: 5px;
+        }
+        .horizontalBar{
+            background: aliceblue;
+            width:80vw;
+            height: 2px;
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
 
         }
+
+        .verticalbar{
+            background-color: white;
+            height: 60px;
+            width: 2px;
+        }
+
     </style>
 </head>
 
@@ -79,18 +136,57 @@
             </div>
             <div class="right">
                 <ul>
-                    <li>Home</li>
-                    <li>Courses</li>
-                    <li>Projects</li>
-                    <li>Experiences</li>
-                    <li>Contact Me</li>
-                    <li>About</li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">Courses</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="/">Experiences</a></li>
+                    <li><a href="/">Contact Me</a></li>
+                    <li><a href="/">About</a></li>
                 </ul>
             </div>
         </nav>
     </header>
+<main>
+    <section class="firstSection">
+        <div class="leftSection">
+            Hi, I am  <span class="myName">Dev</span>
+            <div> I am  a </div>
+            <span id="element"></span>
+        </div>
+        <div class="rightSection">
+            <img src="developer.png" alt="Developer image">
+            <div>Life Starts at the End of your comfort zone</div>
+        </div>
+    </section>
+    
+    <hr>
 
-    <main>
+    <section class="SecondSection">
+        <span class="greyText">What I have done so far</span>
+        <h1>Work Experiences</h1>
+        <div class="horizontalBar">
+            <div class="verticalbar"></div>
+            <div class="verticalbar"></div>
+            <div class="verticalbar"></div>
+            <div class="verticalbar"></div>
+        </div>
+       
+    </section>
+</main>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+    var typed = new Typed('#element', {
+      strings: ['Web Developer','Data Scientist', 'IBM SME', 'Educator',''],
+      typeSpeed: 50,
+      loop:true
+    });
+  </script>
+
+
+
+
+
+    <!-- <main>
         <section class="firstSection">
             <div class="leftSection">
                 Hi, My name is Dev
@@ -100,7 +196,7 @@
                 <img src="developer.png" alt="Developer Image">
             </div>
         </section>
-    </main>
+    </main> -->
 </body>
 
 </html>
